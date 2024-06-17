@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 const App = () => {
-const [dogPicture, setDogPicture] = useState('')
+  const [dogPicture, setDogPicture] = useState('')
 
   useEffect(() => {
     fetch("https://dog.ceo/api/breeds/image/random")
@@ -9,9 +9,7 @@ const [dogPicture, setDogPicture] = useState('')
       .then((r) => setDogPicture(r.message))
   }, []);
 
- return dogPicture ? <img src={dogPicture} alt='A Random Dog'/> : <p>Loading</p>
-
-
+  return dogPicture ? <img src={dogPicture} alt='A Random Dog'/> : <p>Loading</p>
 }
 
 export default App;
